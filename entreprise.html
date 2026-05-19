@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IRV'OHM - Solutions Entreprises</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#bbcbbb",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#005228",
+                    "on-secondary-fixed-variant": "#004b73",
+                    "surface-container": "#eceef0",
+                    "on-primary-container": "#005027",
+                    "inverse-surface": "#2d3133",
+                    "primary": "#006d37",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#005141",
+                    "secondary": "#006397",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#001d31",
+                    "secondary-fixed": "#cce5ff",
+                    "on-surface": "#191c1e",
+                    "surface-variant": "#e0e3e5",
+                    "primary-container": "#2ecc71",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-error": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "secondary-container": "#5cb8fd",
+                    "on-secondary-container": "#00476e",
+                    "secondary-fixed-dim": "#92ccff",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-container": "#32c8a7",
+                    "primary-fixed-dim": "#4ae183",
+                    "outline": "#6c7b6d",
+                    "surface-container-low": "#f2f4f6",
+                    "on-surface-variant": "#3d4a3e",
+                    "tertiary-fixed-dim": "#4eddbb",
+                    "on-primary-fixed": "#00210c",
+                    "tertiary": "#006b58",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "on-tertiary-fixed": "#002019",
+                    "inverse-primary": "#4ae183",
+                    "background": "#f7f9fb",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e6e8ea",
+                    "primary-fixed": "#6bfe9c",
+                    "on-tertiary-container": "#004f40",
+                    "tertiary-fixed": "#6ff9d6",
+                    "surface-tint": "#006d37",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d8dadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "xl": "80px",
+                    "xs": "4px",
+                    "sm": "12px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "max-width": "1280px",
+                    "lg": "48px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .omega-watermark {
+            position: absolute;
+            opacity: 0.05;
+            font-size: 40rem;
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                IRV'OHM
+            </div>
+<nav class="hidden md:flex gap-md items-center h-full">
+ <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="index.html">Accueil</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="particulier.html">Particuliers</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="entreprise.html">Entreprises</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="devis.html">Devis</a></nav>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-label-md uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all shadow-md">
+                Devis Gratuit
+            </button>
+</div>
+</header>
+<main class="relative">
+<div class="omega-watermark top-20 -right-40">Ω</div>
+<!-- Hero Section -->
+<section class="relative py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="z-10">
+<span class="text-primary font-label-md uppercase tracking-widest mb-base block">Solutions Professionnelles</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-md">Accélérez votre transition énergétique</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl">
+                        Des solutions de recharge intelligentes et durables conçues pour les flottes, les entreprises et les établissements recevant du public.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-label-md uppercase tracking-wider shadow-lg hover:opacity-95 transition-all">
+                            Consulter un expert
+                        </button>
+<button class="border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-md uppercase tracking-wider hover:bg-secondary/5 transition-all">
+                            Nos Réalisations
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/20 transform rotate-2">
+<img alt="Solutions de recharge entreprises" class="w-full h-full object-cover" data-alt="A professional aerial view of a modern corporate parking lot equipped with rows of sleek electric vehicle charging stations. White and silver luxury electric cars are plugged in, reflecting the bright afternoon sun. The environment is clean, tech-forward, and features lush green landscaping integration, conveying a high-end, eco-friendly business campus atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDScsKppGLEQTnWeO948B22VLM8UFpIBQqr99nuY8Sy3ASTEvM31bb1ldIY2h-QFVUeS8vJVaYXXxwdHvBqy5K7fmAR-tUXfV3p8uKs7r4Em1Wdyhd0aWAqyGy6PGPjiBwQHGylOrEAAF9hgWJEXoyhHOkKjhCFlJ0i76uVOc4u9XVoaPc4lfxs2moiED7DRVVEGHUZHX2801AePkRfYsOUih2dTepV5n6cvpoc1yQBdihWLbsOfSNcD3xWDbIwYsmwVa2BcQfIw-X5"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-md rounded-2xl shadow-xl border border-outline-variant/30 hidden md:block">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary text-headline-md">ev_station</span>
+<div>
+<p class="font-label-sm text-label-sm uppercase">Installation Pro</p>
+<p class="font-headline-sm text-headline-sm text-primary">Reliable Tech</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Solutions -->
+<section class="bg-surface-container-low py-xl px-margin-mobile md:px-margin-desktop">
+<div class="max-w-max-width mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md mb-base">Des solutions adaptées à chaque secteur</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Que vous gériez un parc de véhicules ou un espace commercial, nous optimisons votre infrastructure de recharge.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Flottes -->
+<div class="md:col-span-2 bg-surface p-lg rounded-3xl border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-base">Gestion de Flottes Électriques</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Optimisez la rotation de vos véhicules de service avec des bornes haute performance et un suivi centralisé des consommations.</p>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-surface-container-low p-md rounded-xl">
+<span class="text-primary font-bold text-headline-sm">99.9%</span>
+<p class="text-label-sm opacity-70">Disponibilité garantie</p>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl">
+<span class="text-primary font-bold text-headline-sm">-30%</span>
+<p class="text-label-sm opacity-70">Coûts d'énergie</p>
+</div>
+</div>
+</div>
+<!-- Centres Commerciaux -->
+<div class="bg-secondary p-lg rounded-3xl text-on-secondary flex flex-col justify-between hover:shadow-lg transition-shadow">
+<div>
+<div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-base">Centres Commerciaux</h3>
+<p class="font-body-md text-body-md opacity-90 mb-lg">Attirez et fidélisez vos clients avec un service de recharge premium pendant leur shopping.</p>
+</div>
+<button class="bg-white text-secondary font-label-md px-6 py-3 rounded-full uppercase tracking-wider self-start">En savoir plus</button>
+</div>
+<!-- Bureaux -->
+<div class="bg-surface p-lg rounded-3xl border border-outline-variant/30 hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-primary">business</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-base">Immobilier d'Entreprise</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Valorisez votre patrimoine immobilier et facilitez la vie de vos collaborateurs.</p>
+</div>
+<!-- Smart Charging -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-lg rounded-3xl text-on-primary flex flex-col md:flex-row gap-lg items-center overflow-hidden">
+<div class="flex-1">
+<div class="inline-flex items-center gap-xs bg-white/20 px-3 py-1 rounded-full mb-base">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="text-label-sm">Technologie Smart Charging</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-base">Gestion Intelligente de l'Énergie</h3>
+<p class="font-body-md text-body-md opacity-90">Notre système de pilotage dynamique ajuste la puissance de charge en temps réel pour éviter les pics de consommation et réduire votre facture.</p>
+</div>
+<div class="flex-1 bg-white/10 backdrop-blur-md p-md rounded-2xl border border-white/20">
+<div class="space-y-sm">
+<div class="flex justify-between items-center">
+<span class="text-label-sm">Borne A - Actif</span>
+<span class="bg-primary-container/30 px-2 py-0.5 rounded text-[10px]">OPTIMISÉ</span>
+</div>
+<div class="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-white w-2/3"></div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-label-sm">Borne B - Veille</span>
+<span class="text-[10px]">0.5 kW</span>
+</div>
+<div class="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-white/30 w-1/12"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="text-center mb-lg">
+<p class="text-label-md text-on-surface-variant font-bold uppercase tracking-widest opacity-60">Ils nous font confiance</p>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-xl grayscale opacity-50 hover:grayscale-0 transition-all">
+<!-- Logos placeholders with text to simulate industrial partners -->
+<div class="flex items-center gap-base font-headline-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl">factory</span> INDUSTRA
+                </div>
+<div class="flex items-center gap-base font-headline-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl">architecture</span> BUILD-CORP
+                </div>
+<div class="flex items-center gap-base font-headline-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl">inventory_2</span> LOGISTIX
+                </div>
+<div class="flex items-center gap-base font-headline-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-4xl">apartment</span> URBAN-REIT
+                </div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="bg-surface py-xl border-y border-outline-variant/20">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div>
+<span class="material-symbols-outlined text-6xl text-primary/20">format_quote</span>
+<h2 class="font-headline-md text-headline-md mb-md">"Un partenaire fiable pour notre transition."</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg italic">
+                            "IRV'OHM nous a accompagné de l'étude technique jusqu'à la mise en service. Leur solution de smart charging nous a permis d'installer 20 bornes sans modifier notre abonnement électrique principal."
+                        </p>
+<div class="flex items-center gap-md">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="Jean-Marc L." data-alt="Portrait of a professional middle-aged man in a sharp business suit, smiling confidently. He is a facilities manager for a large industrial complex. The background is a blurred office environment with soft morning light, creating a professional and trustworthy atmosphere in a clean tech-forward aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwXLog0NYPIJNXJZ9J6DhQE1fq8rZCsQyHYd7PEiJSykPSwmOZhPrj3y39U6I6C13Q6nsYjks9x5AZMDuscFkMVQVKhihnX1oDUfBQPrBJ_x5D7a3CHGYgI05nqiEKYlrAx-rSTiMEsQqNq0AB78hD7xppK6rQAJfrQv2Nw6ZMHCc8ybfOKJB7iV2PsaT7c4bsrZHCThQnLoNiAh_InCnnYf9ocVyl3ELbi_abTjoho1xOLF21XQ6WAat26Cm3P-iBCsp1VecsTiH1"/>
+</div>
+<div>
+<p class="font-label-md font-bold">Jean-Marc L.</p>
+<p class="text-label-sm text-on-surface-variant">Directeur des Infrastructures, Industra Group</p>
+</div>
+</div>
+</div>
+<div class="relative h-[400px] rounded-3xl overflow-hidden shadow-xl border border-outline-variant/30">
+<img alt="Infrastructure IRV'OHM" class="w-full h-full object-cover" data-alt="A clean, minimalist interior of a modern electric vehicle charging hub inside a corporate building. Several sleek, floor-mounted charging pedestals with illuminated status indicators are lined up. The design is tech-forward with soft white and gray tones, accented by emerald green lights. The mood is efficient, professional, and sustainable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7MEZCCWIXuUgMRr5QSK3B3j1tPZBiMyAgXe29eMCmESondVc9wdiIGfcsGAqyLvf1OJlaBe-7uXzTDLqVe0hifJTFlUOzT0aJ0o_mZ9VZ2--SqFt59ktdxLpyhz3gfoW17914BB4aO1T-LWQV4eYC1audvNiuA1rHrYs2hIXOXplOkelznmb_272w6gEjpX0gVVNG67fwJtuRhpG2S82IXZ-ZADKHoPL7tBnUiUBYQEnPNMmx7pOdEPt4TZz067jpK9P7lS6Qn7VI"/>
+<div class="absolute top-4 right-4 flex gap-xs">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase">Installation Certifiée</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="bg-inverse-surface rounded-[40px] p-lg md:p-xl text-center relative overflow-hidden">
+<div class="omega-watermark bottom-0 left-0 text-white opacity-5">Ω</div>
+<div class="relative z-10">
+<h2 class="font-display-lg-mobile md:font-headline-md text-inverse-on-surface mb-md">Prêt à transformer votre entreprise ?</h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface opacity-80 mb-xl max-w-xl mx-auto">Recevez une étude personnalisée de vos besoins et un devis complet sous 48h.</p>
+<div class="flex flex-col md:flex-row justify-center gap-md">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md uppercase tracking-wider hover:bg-primary-container transition-all">
+                            Demander un devis
+                        </button>
+<button class="border border-inverse-on-surface text-inverse-on-surface px-10 py-4 rounded-full font-label-md uppercase tracking-wider hover:bg-white/10 transition-all">
+                            Télécharger la brochure pro
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant full-width py-lg mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<div class="space-y-md">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">IRV'OHM</div>
+<p class="text-body-md text-on-surface-variant">L'expert de la recharge électrique intelligente pour les professionnels et particuliers.</p>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md font-bold uppercase mb-md">Solutions</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Installation</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Smart Charging</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Maintenance</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Flottes</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md font-bold uppercase mb-md">Entreprise</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">À propos</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Contact</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md font-bold uppercase mb-md">Légal</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Mentions Légales</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-lg border-t border-outline-variant/30 pt-md text-center">
+<p class="text-label-sm text-on-surface-variant">© 2024 IRV'OHM - Solutions de Recharge Électrique. Tous droits réservés.</p>
+</div>
+</footer>
+</body></html>
