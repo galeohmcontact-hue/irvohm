@@ -66,9 +66,9 @@ tailwind.config = {
 <div class="rounded-3xl overflow-hidden shadow-xl">
   <!-- Image hero : voiture électrique avec borne à domicile -->
   <img class="w-full h-[500px] object-cover"
-    src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?w=900&q=80&fit=crop"
+    src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85&fit=crop&auto=format"
     alt="Voiture électrique en charge à domicile"
-    onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&fit=crop'"/>
+    onerror="this.src='https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=900&q=85&fit=crop&auto=format'"/>
 </div>
 </section>
 
@@ -84,9 +84,9 @@ tailwind.config = {
   <div class="bg-surface-container-lowest rounded-[32px] border border-outline-variant/30 hover:shadow-xl transition-all group overflow-hidden">
     <div class="h-56 overflow-hidden relative">
       <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fit=crop"
+        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85&fit=crop&auto=format"
         alt="Installation borne maison individuelle"
-        onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80&fit=crop'"/>
+        onerror="this.src='https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=85&fit=crop&auto=format'"/>
       <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
     </div>
     <div class="p-lg">
@@ -107,9 +107,9 @@ tailwind.config = {
   <div class="bg-surface-container-lowest rounded-[32px] border border-outline-variant/30 hover:shadow-xl transition-all group overflow-hidden">
     <div class="h-56 overflow-hidden relative">
       <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=700&q=80&fit=crop"
+        src="https://images.unsplash.com/photo-1573074617613-fc8ef27e6f9d?w=700&q=85&fit=crop&auto=format"
         alt="Borne de recharge en parking copropriété"
-        onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&fit=crop'"/>
+        onerror="this.src='https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=700&q=85&fit=crop&auto=format'"/>
       <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
     </div>
     <div class="p-lg">
@@ -175,52 +175,10 @@ tailwind.config = {
   <!-- Borne 1 : Wallbox Pulsar Max -->
   <div class="bg-white rounded-3xl overflow-hidden border border-outline-variant/30 transition-transform hover:-translate-y-2">
     <div class="h-64 bg-surface-container flex items-center justify-center p-lg relative overflow-hidden">
-      <svg viewBox="0 0 180 260" xmlns="http://www.w3.org/2000/svg" width="160" height="230" style="transition:transform 0.4s ease;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.18))" class="hover:scale-105">
-        <defs>
-          <linearGradient id="wbBody" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#3a3a3a"/><stop offset="100%" stop-color="#1c1c1c"/></linearGradient>
-          <linearGradient id="wbFace" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#2e2e2e"/><stop offset="100%" stop-color="#222"/></linearGradient>
-          <radialGradient id="wbHalo" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#00e876" stop-opacity="0.9"/><stop offset="70%" stop-color="#00c863" stop-opacity="0.5"/><stop offset="100%" stop-color="#00a050" stop-opacity="0"/></radialGradient>
-          <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <!-- Ombre portée -->
-        <ellipse cx="90" cy="252" rx="52" ry="7" fill="rgba(0,0,0,0.12)"/>
-        <!-- Câble -->
-        <path d="M90 225 Q105 238 115 255" stroke="#2a2a2a" stroke-width="9" fill="none" stroke-linecap="round"/>
-        <path d="M90 225 Q105 238 115 255" stroke="#444" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <!-- Corps principal -->
-        <rect x="25" y="30" width="130" height="195" rx="18" fill="url(#wbBody)"/>
-        <!-- Face avant -->
-        <rect x="33" y="40" width="114" height="175" rx="14" fill="url(#wbFace)"/>
-        <!-- Plaque de fixation murale (haut) -->
-        <rect x="25" y="30" width="130" height="18" rx="9" fill="#111"/>
-        <!-- Trou de fixation -->
-        <circle cx="55" cy="39" r="3" fill="#333"/>
-        <circle cx="125" cy="39" r="3" fill="#333"/>
-        <!-- Halo LED glow -->
-        <circle cx="90" cy="108" r="34" fill="url(#wbHalo)" opacity="0.6"/>
-        <!-- Anneau LED externe -->
-        <circle cx="90" cy="108" r="30" fill="none" stroke="#00e876" stroke-width="2.5" opacity="0.9" filter="url(#glow)"/>
-        <!-- Anneau LED interne -->
-        <circle cx="90" cy="108" r="22" fill="none" stroke="#00c063" stroke-width="1" opacity="0.4"/>
-        <!-- Centre LED -->
-        <circle cx="90" cy="108" r="14" fill="#1a2a1a"/>
-        <circle cx="90" cy="108" r="8" fill="#00e876" opacity="0.15"/>
-        <!-- Texte Wallbox -->
-        <text x="90" y="157" text-anchor="middle" fill="#00c863" font-size="9.5" font-family="Arial,sans-serif" font-weight="700" letter-spacing="1.5">WALLBOX</text>
-        <!-- Modèle -->
-        <text x="90" y="170" text-anchor="middle" fill="#555" font-size="7" font-family="Arial,sans-serif" letter-spacing="0.5">PULSAR MAX</text>
-        <!-- Connecteur Type 2 -->
-        <rect x="68" y="185" width="44" height="28" rx="8" fill="#1a1a1a"/>
-        <rect x="71" y="188" width="38" height="22" rx="6" fill="#252525"/>
-        <!-- Broches connecteur -->
-        <circle cx="81" cy="197" r="2.5" fill="#444"/>
-        <circle cx="90" cy="197" r="2.5" fill="#444"/>
-        <circle cx="99" cy="197" r="2.5" fill="#444"/>
-        <circle cx="85" cy="204" r="2.5" fill="#444"/>
-        <circle cx="95" cy="204" r="2.5" fill="#444"/>
-        <!-- Reflet haut -->
-        <rect x="33" y="40" width="114" height="30" rx="14" fill="white" opacity="0.03"/>
-      </svg>
+      <img class="borne-img"
+        src="https://images.unsplash.com/photo-1645461799668-0e3cb89f74e9?w=400&q=85&fit=crop&auto=format"
+        alt="Wallbox Pulsar Max"
+        onerror="this.src='https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&q=85&fit=crop&auto=format'"/>
       <div class="absolute top-md right-md bg-primary text-on-primary px-sm py-xs rounded-lg font-label-sm">Populaire</div>
     </div>
     <div class="p-md">
@@ -244,52 +202,10 @@ tailwind.config = {
   <!-- Borne 2 : Schneider Electric EVlink Home Smart -->
   <div class="bg-white rounded-3xl overflow-hidden border border-outline-variant/30 transition-transform hover:-translate-y-2">
     <div class="h-64 bg-surface-container flex items-center justify-center p-lg overflow-hidden">
-      <svg viewBox="0 0 180 260" xmlns="http://www.w3.org/2000/svg" width="160" height="230" style="transition:transform 0.4s ease;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15))" class="hover:scale-105">
-        <defs>
-          <linearGradient id="seBody" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#f5f5f5"/><stop offset="100%" stop-color="#dcdcdc"/></linearGradient>
-          <linearGradient id="seFace" x1="0" y1="0" x2="0.5" y2="1"><stop offset="0%" stop-color="#ebebeb"/><stop offset="100%" stop-color="#d8d8d8"/></linearGradient>
-          <linearGradient id="seGreen" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3dcd58"/><stop offset="100%" stop-color="#27ae60"/></linearGradient>
-        </defs>
-        <ellipse cx="90" cy="252" rx="52" ry="7" fill="rgba(0,0,0,0.10)"/>
-        <!-- Câble Type 2 -->
-        <path d="M78 222 Q65 238 60 255" stroke="#bbb" stroke-width="9" fill="none" stroke-linecap="round"/>
-        <path d="M78 222 Q65 238 60 255" stroke="#ddd" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <!-- Corps blanc -->
-        <rect x="22" y="28" width="136" height="198" rx="16" fill="url(#seBody)"/>
-        <!-- Ligne de séparation gauche (style Schneider) -->
-        <rect x="22" y="28" width="18" height="198" rx="8" fill="#3dcd58"/>
-        <rect x="28" y="28" width="12" height="198" fill="#3dcd58"/>
-        <!-- Face principale -->
-        <rect x="42" y="38" width="108" height="178" rx="10" fill="url(#seFace)"/>
-        <!-- Logo Schneider bande verte -->
-        <rect x="42" y="38" width="108" height="32" rx="10" fill="url(#seGreen)"/>
-        <text x="96" y="59" text-anchor="middle" fill="white" font-size="8" font-family="Arial,sans-serif" font-weight="700" letter-spacing="0.5">SCHNEIDER ELECTRIC</text>
-        <!-- Écran LCD -->
-        <rect x="55" y="85" width="82" height="46" rx="5" fill="#1a2b1a"/>
-        <rect x="58" y="88" width="76" height="40" rx="3" fill="#1e3520"/>
-        <!-- Affichage kW -->
-        <text x="96" y="110" text-anchor="middle" fill="#00e876" font-size="14" font-family="monospace" font-weight="bold">22 kW</text>
-        <text x="96" y="122" text-anchor="middle" fill="#4CAF50" font-size="7" font-family="Arial,sans-serif">CHARGING</text>
-        <!-- Bouton RFID -->
-        <circle cx="96" cy="155" r="14" fill="#e0e0e0"/>
-        <circle cx="96" cy="155" r="11" fill="#d0d0d0"/>
-        <path d="M91 150 Q96 148 101 150 Q103 155 101 160 Q96 162 91 160 Q89 155 91 150Z" fill="none" stroke="#3dcd58" stroke-width="1.5"/>
-        <circle cx="96" cy="155" r="3" fill="#3dcd58"/>
-        <!-- Label RFID -->
-        <text x="96" y="177" text-anchor="middle" fill="#888" font-size="7" font-family="Arial,sans-serif">RFID</text>
-        <!-- Prise Type 2 -->
-        <rect x="68" y="185" width="56" height="26" rx="7" fill="#c8c8c8"/>
-        <rect x="72" y="188" width="48" height="20" rx="5" fill="#b8b8b8"/>
-        <circle cx="84" cy="196" r="2.5" fill="#888"/>
-        <circle cx="96" cy="196" r="2.5" fill="#888"/>
-        <circle cx="108" cy="196" r="2.5" fill="#888"/>
-        <circle cx="90" cy="203" r="2.5" fill="#888"/>
-        <circle cx="102" cy="203" r="2.5" fill="#888"/>
-        <!-- Modèle -->
-        <text x="96" y="217" text-anchor="middle" fill="#aaa" font-size="6.5" font-family="Arial,sans-serif" letter-spacing="0.3">EVlink Home Smart</text>
-        <!-- Reflet -->
-        <rect x="42" y="68" width="108" height="20" rx="5" fill="white" opacity="0.08"/>
-      </svg>
+      <img class="borne-img"
+        src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=400&q=85&fit=crop&auto=format"
+        alt="Schneider EVlink Home Smart"
+        onerror="this.src='https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&q=85&fit=crop&auto=format'"/>
     </div>
     <div class="p-md">
       <div class="flex justify-between items-center mb-sm">
@@ -313,9 +229,9 @@ tailwind.config = {
   <div class="bg-white rounded-3xl overflow-hidden border border-outline-variant/30 transition-transform hover:-translate-y-2">
     <div class="h-64 bg-surface-container flex items-center justify-center p-lg overflow-hidden">
       <img class="borne-img"
-        src="https://www.hager.com/binaries/content/gallery/hager-global/product-images/ev-charging/witty-home/witty-home.png"
+        src="https://images.unsplash.com/photo-1629116083664-6b1fd903f9bf?w=400&q=85&fit=crop&auto=format"
         alt="Hager Witty Home"
-        onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&q=80&fit=crop'"/>
+        onerror="this.src='https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&q=85&fit=crop&auto=format'"/>
     </div>
     <div class="p-md">
       <div class="flex justify-between items-center mb-sm">
@@ -653,3 +569,5 @@ document.getElementById('inp-adresse').addEventListener('input',function(){var q
 function processKlarna(pr,no,em,te,ad){ fetch('/api/create-klarna-session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({borne:state.borne,totalTTC:state.totalTTC,client:{prenom:pr,nom:no,email:em,tel:te,adresse:ad},date:state.date,heure:state.heure})}).then(function(r){return r.json();}).then(function(data){if(data.error){showError(data.error);setLoading(false);return;} window.location.href=data.url;}).catch(function(){showError('Erreur réseau. Vérifiez votre connexion et réessayez.');setLoading(false);}); }
 </script>
 </body></html>
+HTMLEOF
+echo "File written: $(wc -l < /home/claude/particulier.html) lines"
