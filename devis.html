@@ -1,380 +1,783 @@
 <!DOCTYPE html>
-<html class="light" lang="fr"><head>
+<html class="light" lang="fr">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact &amp; Devis - IRV'OHM</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "outline-variant": "#bbcbbb",
-                    "error": "#ba1a1a",
-                    "on-primary-fixed-variant": "#005228",
-                    "on-secondary-fixed-variant": "#004b73",
-                    "surface-container": "#eceef0",
-                    "on-primary-container": "#005027",
-                    "inverse-surface": "#2d3133",
-                    "primary": "#006d37",
-                    "on-error-container": "#93000a",
-                    "on-tertiary-fixed-variant": "#005141",
-                    "secondary": "#006397",
-                    "on-primary": "#ffffff",
-                    "on-secondary-fixed": "#001d31",
-                    "secondary-fixed": "#cce5ff",
-                    "on-surface": "#191c1e",
-                    "surface-variant": "#e0e3e5",
-                    "primary-container": "#2ecc71",
-                    "surface-container-highest": "#e0e3e5",
-                    "on-error": "#ffffff",
-                    "surface": "#f7f9fb",
-                    "secondary-container": "#5cb8fd",
-                    "on-secondary-container": "#00476e",
-                    "secondary-fixed-dim": "#92ccff",
-                    "surface-bright": "#f7f9fb",
-                    "tertiary-container": "#32c8a7",
-                    "primary-fixed-dim": "#4ae183",
-                    "outline": "#6c7b6d",
-                    "surface-container-low": "#f2f4f6",
-                    "on-surface-variant": "#3d4a3e",
-                    "tertiary-fixed-dim": "#4eddbb",
-                    "on-primary-fixed": "#00210c",
-                    "tertiary": "#006b58",
-                    "on-tertiary": "#ffffff",
-                    "inverse-on-surface": "#eff1f3",
-                    "on-background": "#191c1e",
-                    "on-tertiary-fixed": "#002019",
-                    "inverse-primary": "#4ae183",
-                    "background": "#f7f9fb",
-                    "on-secondary": "#ffffff",
-                    "surface-container-high": "#e6e8ea",
-                    "primary-fixed": "#6bfe9c",
-                    "on-tertiary-container": "#004f40",
-                    "tertiary-fixed": "#6ff9d6",
-                    "surface-tint": "#006d37",
-                    "surface-container-lowest": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "surface-dim": "#d8dadc"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "margin-desktop": "64px",
-                    "margin-mobile": "16px",
-                    "xl": "80px",
-                    "xs": "4px",
-                    "sm": "12px",
-                    "base": "8px",
-                    "gutter": "24px",
-                    "max-width": "1280px",
-                    "lg": "48px",
-                    "md": "24px"
-            },
-            "fontFamily": {
-                    "label-sm": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "body-md": ["Inter"],
-                    "headline-sm": ["Montserrat"],
-                    "headline-md": ["Montserrat"],
-                    "display-lg-mobile": ["Montserrat"],
-                    "display-lg": ["Montserrat"],
-                    "label-md": ["Inter"]
-            },
-            "fontSize": {
-                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}]
-            }
-          },
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "outline-variant": "#bbcbbb",
+          "error": "#ba1a1a",
+          "surface-container": "#eceef0",
+          "on-primary-container": "#005027",
+          "primary": "#006d37",
+          "secondary": "#006397",
+          "on-primary": "#ffffff",
+          "on-surface": "#191c1e",
+          "surface-variant": "#e0e3e5",
+          "primary-container": "#2ecc71",
+          "surface-container-highest": "#e0e3e5",
+          "surface": "#f7f9fb",
+          "secondary-container": "#5cb8fd",
+          "on-secondary-container": "#00476e",
+          "tertiary-container": "#32c8a7",
+          "outline": "#6c7b6d",
+          "surface-container-low": "#f2f4f6",
+          "on-surface-variant": "#3d4a3e",
+          "tertiary": "#006b58",
+          "on-tertiary": "#ffffff",
+          "on-background": "#191c1e",
+          "inverse-primary": "#4ae183",
+          "background": "#f7f9fb",
+          "on-secondary": "#ffffff",
+          "surface-container-high": "#e6e8ea",
+          "surface-container-lowest": "#ffffff",
+          "surface-dim": "#d8dadc"
         },
+        borderRadius: {
+          DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"
+        },
+        spacing: {
+          "margin-desktop": "64px", "margin-mobile": "16px",
+          xl: "80px", xs: "4px", sm: "12px", base: "8px",
+          gutter: "24px", "max-width": "1280px", lg: "48px", md: "24px"
+        },
+        fontFamily: {
+          "label-sm": ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"],
+          "headline-sm": ["Montserrat"], "headline-md": ["Montserrat"],
+          "display-lg-mobile": ["Montserrat"], "display-lg": ["Montserrat"], "label-md": ["Inter"]
+        },
+        fontSize: {
+          "label-sm": ["12px", {lineHeight:"1.2",fontWeight:"600"}],
+          "body-lg": ["18px", {lineHeight:"1.6",fontWeight:"400"}],
+          "body-md": ["16px", {lineHeight:"1.5",fontWeight:"400"}],
+          "headline-sm": ["24px", {lineHeight:"1.3",fontWeight:"600"}],
+          "headline-md": ["32px", {lineHeight:"1.2",fontWeight:"600"}],
+          "display-lg-mobile": ["32px", {lineHeight:"1.2",fontWeight:"700"}],
+          "display-lg": ["48px", {lineHeight:"1.1",letterSpacing:"-0.02em",fontWeight:"700"}],
+          "label-md": ["14px", {lineHeight:"1.4",letterSpacing:"0.01em",fontWeight:"500"}]
+        }
       }
-    </script>
+    }
+  }
+</script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .omega-watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 0;
-            width: 600px;
-            height: 600px;
-        }
-    </style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .omega-watermark { position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.05;pointer-events:none;z-index:0;width:600px;height:600px; }
+
+  /* Wizard styles */
+  .wiz-step { display: none; animation: wiz-in .25s ease; }
+  .wiz-step.active { display: block; }
+  @keyframes wiz-in { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+  .option-card {
+    position: relative;
+    border: 1.5px solid #e0e3e5;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .option-card:hover { border-color: #006d37; background: #f0faf4; }
+  .option-card.selected { border-color: #006d37; background: #f0faf4; }
+  .option-card .oc-check {
+    position: absolute; top: 10px; right: 10px;
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 1.5px solid #d0d9d1;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .15s;
+  }
+  .option-card.selected .oc-check { background: #006d37; border-color: #006d37; color: white; }
+  .option-card .oc-icon { font-size: 20px; margin-bottom: 2px; color: #6c7b6d; }
+  .option-card.selected .oc-icon { color: #006d37; }
+  .option-card .oc-label { font-size: 14px; font-weight: 600; color: #191c1e; }
+  .option-card .oc-desc { font-size: 12px; color: #6c7b6d; line-height: 1.4; }
+
+  /* Progress dots */
+  .step-dot { width:8px;height:8px;border-radius:50%;background:#e0e3e5;transition:all .3s; }
+  .step-dot.done { background:#4ae183; }
+  .step-dot.active { width:24px;border-radius:4px;background:#006d37; }
+
+  /* Form inputs override */
+  .wiz-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e0e3e5;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #191c1e;
+    background: #fff;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+    font-family: Inter, sans-serif;
+  }
+  .wiz-input:focus { border-color: #006d37; box-shadow: 0 0 0 3px rgba(0,109,55,.1); }
+
+  .wiz-btn-primary {
+    background: linear-gradient(135deg, #006d37 0%, #006397 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity .15s, transform .1s;
+    letter-spacing: .03em;
+  }
+  .wiz-btn-primary:hover { opacity: .9; }
+  .wiz-btn-primary:active { transform: scale(.98); }
+  .wiz-btn-primary:disabled { background: #d0d9d1; cursor: not-allowed; opacity: 1; }
+
+  .wiz-btn-back {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #6c7b6d;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+    font-family: Inter, sans-serif;
+    transition: color .15s;
+  }
+  .wiz-btn-back:hover { color: #191c1e; }
+
+  .recap-row { display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eceef0;font-size:14px; }
+  .recap-row:last-child { border-bottom:none; }
+
+  /* Progress bar */
+  .prog-bar { height:3px;background:#eceef0;border-radius:2px;overflow:hidden;margin-bottom:2rem; }
+  .prog-fill { height:100%;background:linear-gradient(90deg,#006d37,#006397);border-radius:2px;transition:width .4s ease; }
+
+  .tag-badge {
+    display:inline-flex;align-items:center;gap:4px;
+    font-size:12px;padding:4px 10px;border-radius:99px;
+    background:#e7f5ed;color:#005228;font-weight:600;
+    margin:2px;
+  }
+</style>
 </head>
-<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container/30">
+<body class="bg-surface font-body-md text-on-surface">
+
 <!-- TopNavBar -->
 <header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
-<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-<div class="font-headline-sm text-headline-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                IRV'OHM
-            </div>
-<nav class="hidden md:flex gap-md items-center h-full">
-  <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="index.html">Accueil</a>
-  <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="particulier.html">Particuliers</a>
-  <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="entreprise.html">Entreprises</a>
-  <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="devis.html">Devis</a>
-</nav>
-<button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md uppercase tracking-wider shadow-sm hover:opacity-90 active:scale-95 transition-all">
-                Devis Gratuit
-            </button>
-</div>
+  <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+    <div class="font-headline-sm text-headline-sm font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">IRV'OHM</div>
+    <nav class="hidden md:flex gap-md items-center h-full">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="index.html">Accueil</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="particulier.html">Particuliers</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="entreprise.html">Entreprises</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-primary transition-colors" href="devis.html">Devis</a>
+    </nav>
+    <button class="bg-gradient-to-r from-primary to-secondary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md uppercase tracking-wider shadow-sm hover:opacity-90 active:scale-95 transition-all">Devis Gratuit</button>
+  </div>
 </header>
+
 <main class="relative overflow-hidden">
-<!-- Omega Watermark -->
-<svg class="omega-watermark" fill="currentColor" viewbox="0 0 100 100">
-<path d="M50 10C27.9 10 10 27.9 10 50c0 14.1 7.3 26.5 18.3 33.6l5.7-9.8C25.7 68.9 20 60.1 20 50c0-16.6 13.4-30 30-30s30 13.4 30 30c0 10.1-5.7 18.9-14 23.8l5.7 9.8C82.7 76.5 90 64.1 90 50c0-22.1-17.9-40-40-40zM35 80h30v10H35z"></path>
-</svg>
-<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl relative z-10">
-<!-- Hero Header Section -->
-<div class="mb-xl text-center md:text-left">
-<span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-sm block">Contactez-nous</span>
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">Prêt pour votre transition électrique ?</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Nos experts vous accompagnent de l'étude technique jusqu'à l'installation de votre borne de recharge.</p>
-</div>
-<!-- Main Layout: Bento Style -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Form Section (Bento Large Card) -->
-<div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md md:p-lg shadow-sm">
-<h2 class="font-headline-md text-headline-md mb-lg">Demande de Devis</h2>
+  <svg class="omega-watermark" fill="currentColor" viewBox="0 0 100 100">
+    <path d="M50 10C27.9 10 10 27.9 10 50c0 14.1 7.3 26.5 18.3 33.6l5.7-9.8C25.7 68.9 20 60.1 20 50c0-16.6 13.4-30 30-30s30 13.4 30 30c0 10.1-5.7 18.9-14 23.8l5.7 9.8C82.7 76.5 90 64.1 90 50c0-22.1-17.9-40-40-40zM35 80h30v10H35z"/>
+  </svg>
 
-<form name="contact" method="POST" data-netlify="true" class="space-y-md">
-<input type="hidden" name="form-name" value="contact" />
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl relative z-10">
 
-  <!-- Nom & Email -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Nom complet</label>
-      <input name="nom" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md" placeholder="Jean Dupont" type="text" required/>
+    <!-- Hero -->
+    <div class="mb-xl text-center md:text-left">
+      <span class="text-primary font-label-md text-label-md uppercase tracking-widest mb-sm block">Contactez-nous</span>
+      <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-md">Prêt pour votre transition électrique ?</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Nos experts vous accompagnent de l'étude technique jusqu'à l'installation de votre borne de recharge.</p>
     </div>
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Email</label>
-      <input name="email" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md" placeholder="jean.dupont@exemple.fr" type="email" required/>
+
+    <!-- Main layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
+      <!-- Wizard Card -->
+      <div class="lg:col-span-7 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-md md:p-lg shadow-sm">
+
+        <!-- Progress bar -->
+        <div class="prog-bar"><div class="prog-fill" id="prog" style="width:16.66%"></div></div>
+
+        <!-- Step dots + label -->
+        <div class="flex items-center gap-3 mb-lg">
+          <div class="flex items-center gap-2" id="dots">
+            <div class="step-dot active" data-dot="1"></div>
+            <div class="step-dot" data-dot="2"></div>
+            <div class="step-dot" data-dot="3"></div>
+            <div class="step-dot" data-dot="4"></div>
+            <div class="step-dot" data-dot="5"></div>
+            <div class="step-dot" data-dot="6"></div>
+          </div>
+          <span class="font-label-md text-label-md text-on-surface-variant" id="stepLabel">Étape 1 sur 6 · Votre profil</span>
+        </div>
+
+        <!-- STEP 1: Profil -->
+        <div class="wiz-step active" id="s1">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Vous êtes…</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Cela nous permet d'adapter votre devis aux solutions les plus adaptées.</p>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="option-card" data-group="profil" data-val="particulier" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">home</span>
+              <div class="oc-label">Particulier</div>
+              <div class="oc-desc">Maison individuelle ou appartement</div>
+            </div>
+            <div class="option-card" data-group="profil" data-val="copropriete" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">apartment</span>
+              <div class="oc-label">Copropriété</div>
+              <div class="oc-desc">Immeuble, résidence</div>
+            </div>
+            <div class="option-card" data-group="profil" data-val="entreprise" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">business</span>
+              <div class="oc-label">Entreprise</div>
+              <div class="oc-desc">Parking salarié, flotte VE</div>
+            </div>
+            <div class="option-card" data-group="profil" data-val="commerce" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">storefront</span>
+              <div class="oc-label">Commerce / ERP</div>
+              <div class="oc-desc">Parking client, hôtel, commerce</div>
+            </div>
+          </div>
+          <div class="flex justify-end mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-primary" id="n1" disabled onclick="goNext(2)">
+              Continuer <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Installation -->
+        <div class="wiz-step" id="s2">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Votre installation</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Combien de bornes souhaitez-vous installer et quelle puissance ?</p>
+          <p class="font-label-md text-label-md text-on-surface-variant mb-sm">Nombre de bornes</p>
+          <div class="grid grid-cols-5 gap-2 mb-md">
+            <div class="option-card" style="padding:.75rem;align-items:center;flex-direction:row;justify-content:center" data-group="nb" data-val="1" onclick="pick(this)">
+              <span class="oc-label">1</span>
+            </div>
+            <div class="option-card" style="padding:.75rem;align-items:center;flex-direction:row;justify-content:center" data-group="nb" data-val="2" onclick="pick(this)">
+              <span class="oc-label">2</span>
+            </div>
+            <div class="option-card" style="padding:.75rem;align-items:center;flex-direction:row;justify-content:center" data-group="nb" data-val="3-5" onclick="pick(this)">
+              <span class="oc-label">3–5</span>
+            </div>
+            <div class="option-card" style="padding:.75rem;align-items:center;flex-direction:row;justify-content:center" data-group="nb" data-val="6-10" onclick="pick(this)">
+              <span class="oc-label">6–10</span>
+            </div>
+            <div class="option-card" style="padding:.75rem;align-items:center;flex-direction:row;justify-content:center" data-group="nb" data-val="10+" onclick="pick(this)">
+              <span class="oc-label">10+</span>
+            </div>
+          </div>
+          <p class="font-label-md text-label-md text-on-surface-variant mb-sm">Puissance souhaitée</p>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="option-card" data-group="puissance" data-val="3.7kW" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">bolt</span>
+              <div class="oc-label">3,7 kW</div>
+              <div class="oc-desc">Hybride rechargeable, usage léger</div>
+            </div>
+            <div class="option-card" data-group="puissance" data-val="7.4kW" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">bolt</span>
+              <div class="oc-label">7,4 kW</div>
+              <div class="oc-desc">Standard, 100% électrique</div>
+            </div>
+            <div class="option-card" data-group="puissance" data-val="22kW" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">bolt</span>
+              <div class="oc-label">22 kW</div>
+              <div class="oc-desc">Triphasé, recharge rapide</div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-back" onclick="goBack(1)">
+              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Retour
+            </button>
+            <button class="wiz-btn-primary" id="n2" disabled onclick="goNext(3)">
+              Continuer <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Électricité -->
+        <div class="wiz-step" id="s3">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Votre installation électrique</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Ces informations nous permettent d'évaluer les travaux nécessaires.</p>
+          <p class="font-label-md text-label-md text-on-surface-variant mb-sm">Distance entre la borne et le tableau électrique</p>
+          <div class="grid grid-cols-2 gap-3 mb-md">
+            <div class="option-card" data-group="distance" data-val="Moins de 5 m" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <div class="oc-label">Moins de 5 m</div>
+              <div class="oc-desc">Tableau dans le même espace</div>
+            </div>
+            <div class="option-card" data-group="distance" data-val="5 à 10 m" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <div class="oc-label">5 à 10 m</div>
+              <div class="oc-desc">Couloir ou pièce adjacente</div>
+            </div>
+            <div class="option-card" data-group="distance" data-val="10 à 20 m" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <div class="oc-label">10 à 20 m</div>
+              <div class="oc-desc">Autre étage ou bout du couloir</div>
+            </div>
+            <div class="option-card" data-group="distance" data-val="Plus de 20 m" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <div class="oc-label">Plus de 20 m</div>
+              <div class="oc-desc">Garage séparé, extérieur</div>
+            </div>
+          </div>
+          <div class="space-y-xs">
+            <label class="font-label-md text-label-md text-on-surface-variant">Type de borne souhaité <span style="font-weight:400;opacity:.7">(optionnel)</span></label>
+            <select id="sel_borne" class="wiz-input" style="margin-top:6px">
+              <option value="">— Pas de préférence —</option>
+              <option value="Wallbox Pulsar Max">Wallbox Pulsar Max</option>
+              <option value="Schneider Electric Standard">Schneider Electric Standard</option>
+              <option value="Hager Witty Home">Hager Witty Home</option>
+            </select>
+          </div>
+          <div class="flex justify-between items-center mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-back" onclick="goBack(2)">
+              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Retour
+            </button>
+            <button class="wiz-btn-primary" id="n3" disabled onclick="goNext(4)">
+              Continuer <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Délai & localisation -->
+        <div class="wiz-step" id="s4">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Délai & localisation</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Quand souhaitez-vous réaliser les travaux ?</p>
+          <div class="grid grid-cols-3 gap-3 mb-md">
+            <div class="option-card" data-group="delai" data-val="Urgent" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">local_fire_department</span>
+              <div class="oc-label">Urgent</div>
+              <div class="oc-desc">Le plus tôt possible</div>
+            </div>
+            <div class="option-card" data-group="delai" data-val="Dans le mois" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">calendar_month</span>
+              <div class="oc-label">Ce mois-ci</div>
+              <div class="oc-desc">Dans le mois</div>
+            </div>
+            <div class="option-card" data-group="delai" data-val="Dans 3 mois" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">schedule</span>
+              <div class="oc-label">3 mois</div>
+              <div class="oc-desc">Dans les 3 mois</div>
+            </div>
+            <div class="option-card" data-group="delai" data-val="Dans 6 mois" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">schedule</span>
+              <div class="oc-label">6 mois</div>
+              <div class="oc-desc">Dans les 6 mois</div>
+            </div>
+            <div class="option-card" data-group="delai" data-val="Sans délai précis" onclick="pick(this)">
+              <div class="oc-check"><span class="material-symbols-outlined text-xs" style="font-size:12px">check</span></div>
+              <span class="material-symbols-outlined oc-icon">help_outline</span>
+              <div class="oc-label">Pas de délai</div>
+              <div class="oc-desc">Je compare les offres</div>
+            </div>
+          </div>
+          <div class="space-y-xs">
+            <label class="font-label-md text-label-md text-on-surface-variant">Adresse du chantier <span style="font-weight:400;opacity:.7">(optionnel)</span></label>
+            <input type="text" id="inp_adresse" class="wiz-input" style="margin-top:6px" placeholder="123 rue de la Paix, 75000 Paris"/>
+          </div>
+          <div class="flex justify-between items-center mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-back" onclick="goBack(3)">
+              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Retour
+            </button>
+            <button class="wiz-btn-primary" id="n4" disabled onclick="goNext(5)">
+              Continuer <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Contact -->
+        <div class="wiz-step" id="s5">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Vos coordonnées</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Nous vous envoyons votre devis personnalisé sous 48h.</p>
+          <div class="grid grid-cols-2 gap-3 mb-3">
+            <div>
+              <label class="font-label-md text-label-md text-on-surface-variant block mb-xs">Prénom</label>
+              <input type="text" id="inp_prenom" class="wiz-input" placeholder="Jean"/>
+            </div>
+            <div>
+              <label class="font-label-md text-label-md text-on-surface-variant block mb-xs">Nom</label>
+              <input type="text" id="inp_nom" class="wiz-input" placeholder="Dupont"/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="font-label-md text-label-md text-on-surface-variant block mb-xs">Email <span style="color:#ba1a1a">*</span></label>
+            <input type="email" id="inp_email" class="wiz-input" placeholder="jean.dupont@exemple.fr"/>
+          </div>
+          <div class="mb-3">
+            <label class="font-label-md text-label-md text-on-surface-variant block mb-xs">Téléphone</label>
+            <input type="tel" id="inp_tel" class="wiz-input" placeholder="+33 6 00 00 00 00" value="+33 "/>
+          </div>
+          <div class="mb-3">
+            <label class="font-label-md text-label-md text-on-surface-variant block mb-xs">Message complémentaire <span style="font-weight:400;opacity:.7">(optionnel)</span></label>
+            <textarea id="inp_msg" class="wiz-input" rows="3" placeholder="Précisez votre situation, contraintes techniques, etc." style="resize:none;line-height:1.5"></textarea>
+          </div>
+          <label class="flex items-start gap-sm cursor-pointer mt-md">
+            <input type="checkbox" id="chk_rgpd" class="mt-1" style="width:16px;height:16px;accent-color:#006d37"/>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">J'accepte que mes données soient utilisées par IRV'OHM pour traiter ma demande de devis conformément à notre politique de confidentialité.</span>
+          </label>
+          <div class="flex justify-between items-center mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-back" onclick="goBack(4)">
+              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Retour
+            </button>
+            <button class="wiz-btn-primary" id="n5" disabled onclick="goNext(6)">
+              Vérifier mon devis <span class="material-symbols-outlined" style="font-size:18px">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 6: Récapitulatif -->
+        <div class="wiz-step" id="s6">
+          <h2 class="font-headline-sm text-headline-sm mb-xs">Récapitulatif</h2>
+          <p class="text-on-surface-variant text-body-md mb-md">Vérifiez vos informations avant envoi.</p>
+          <div class="bg-surface-container-low rounded-xl p-md mb-md" id="recap_box"></div>
+          <div id="tags_box" class="mb-md"></div>
+
+          <!-- Hidden Netlify form -->
+          <form name="devis" method="POST" data-netlify="true" id="netlify_form" style="display:none">
+            <input type="hidden" name="form-name" value="devis"/>
+            <input type="hidden" name="profil" id="f_profil"/>
+            <input type="hidden" name="nombre_bornes" id="f_nb"/>
+            <input type="hidden" name="puissance" id="f_puissance"/>
+            <input type="hidden" name="distance_tableau" id="f_distance"/>
+            <input type="hidden" name="type_borne" id="f_borne"/>
+            <input type="hidden" name="delai" id="f_delai"/>
+            <input type="hidden" name="adresse" id="f_adresse"/>
+            <input type="hidden" name="prenom" id="f_prenom"/>
+            <input type="hidden" name="nom" id="f_nom"/>
+            <input type="hidden" name="email" id="f_email"/>
+            <input type="hidden" name="telephone" id="f_tel"/>
+            <input type="hidden" name="message" id="f_msg"/>
+          </form>
+
+          <div class="flex justify-between items-center mt-lg pt-md border-t border-outline-variant/20">
+            <button class="wiz-btn-back" onclick="goBack(5)">
+              <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span> Modifier
+            </button>
+            <button class="wiz-btn-primary" onclick="submitForm()">
+              <span class="material-symbols-outlined" style="font-size:18px">send</span> Envoyer ma demande
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 7: Succès -->
+        <div class="wiz-step" id="s7">
+          <div class="text-center py-xl">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary-container/30 mb-lg">
+              <span class="material-symbols-outlined text-primary" style="font-size:40px;font-variation-settings:'FILL' 1">check_circle</span>
+            </div>
+            <h2 class="font-headline-md text-headline-md mb-sm">Demande envoyée !</h2>
+            <p class="text-on-surface-variant text-body-lg mb-lg max-w-md mx-auto">Merci pour votre confiance. Un expert IRV'OHM vous contacte sous <strong class="text-on-surface">48h</strong> avec un devis personnalisé.</p>
+            <div class="inline-flex items-center gap-sm bg-surface-container-low rounded-xl px-md py-sm">
+              <span class="material-symbols-outlined text-primary" style="font-size:20px">phone</span>
+              <span class="font-body-md text-body-md">Besoin urgent ? <strong>06 51 07 88 28</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-5 flex flex-col gap-gutter">
+        <!-- Coordonnées -->
+        <div class="bg-surface-container border border-outline-variant/30 rounded-xl p-md shadow-sm">
+          <h3 class="font-headline-sm text-headline-sm mb-md">Nos Coordonnées</h3>
+          <ul class="space-y-md">
+            <li class="flex items-start gap-md">
+              <div class="bg-primary/10 p-sm rounded-lg text-primary">
+                <span class="material-symbols-outlined">phone</span>
+              </div>
+              <div>
+                <p class="font-label-md text-label-md text-on-surface-variant">Téléphone</p>
+                <p class="font-body-lg text-body-lg font-semibold text-on-surface">06 51 07 88 28</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-md">
+              <div class="bg-secondary/10 p-sm rounded-lg text-secondary">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <p class="font-label-md text-label-md text-on-surface-variant">Adresse</p>
+                <p class="font-body-lg text-body-lg font-semibold text-on-surface">95200 SARCELLES</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-md">
+              <div class="bg-tertiary/10 p-sm rounded-lg text-tertiary">
+                <span class="material-symbols-outlined">share</span>
+              </div>
+              <div>
+                <p class="font-label-md text-label-md text-on-surface-variant">Réseaux Sociaux</p>
+                <div class="flex gap-sm mt-xs">
+                  <a class="text-on-surface hover:text-primary transition-colors" href="#">LinkedIn</a>
+                  <span class="text-outline-variant">•</span>
+                  <a class="text-on-surface hover:text-primary transition-colors" href="#">Instagram</a>
+                  <span class="text-outline-variant">•</span>
+                  <a class="text-on-surface hover:text-primary transition-colors" href="#">Twitter</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Carte zone d'intervention -->
+        <div class="flex-grow bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm relative min-h-[300px]">
+          <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQUVPFa7UBRJUC7HJqGARQu-thDEqLSYo6I7SDDUX6Akq4-Z-v2PrnEvK5p6kfIUxLRByCFycqMXoxQIJtzp2OOyprW_EkVoXq4fJHU7LJzZZa0V-x0BgLAdPuWN4_4yDlk351a9u5OeFgOYBCcwBZkm3pCLM_DlDdoDnD6Ryy-1b4wkMTo6sKrQ9yGWZoe6YY9W98Y4k4QVZlT8cfzbKJtSF055yFtP6Vc1xlX256uz-lgrbGYkOKmD4B1fWhIkVI5T2rQsshcw" alt="Zone d'intervention Grand Paris"/>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-transparent flex items-end p-md z-10">
+            <div class="bg-white/90 backdrop-blur-sm p-sm rounded-lg border border-outline-variant/30">
+              <span class="flex items-center gap-xs text-primary font-semibold text-body-md">
+                <span class="material-symbols-outlined text-[18px]" style="font-variation-settings:'FILL' 1">verified</span>
+                Zone d'intervention : Grand Paris &amp; IDF
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Avantages -->
+        <div class="bg-surface-container-low border border-outline-variant/30 rounded-xl p-md shadow-sm">
+          <h3 class="font-headline-sm text-headline-sm mb-md">Pourquoi nous choisir ?</h3>
+          <ul class="space-y-sm">
+            <li class="flex items-center gap-sm">
+              <span class="material-symbols-outlined text-primary" style="font-size:20px;font-variation-settings:'FILL' 1">verified</span>
+              <span class="font-body-md text-body-md">Certifié IRVE &amp; qualifié RGE</span>
+            </li>
+            <li class="flex items-center gap-sm">
+              <span class="material-symbols-outlined text-primary" style="font-size:20px;font-variation-settings:'FILL' 1">schedule</span>
+              <span class="font-body-md text-body-md">Devis sous 48h, pose en 15 jours</span>
+            </li>
+            <li class="flex items-center gap-sm">
+              <span class="material-symbols-outlined text-primary" style="font-size:20px;font-variation-settings:'FILL' 1">payments</span>
+              <span class="font-body-md text-body-md">Aides ADVENIR &amp; TVA 5,5% gérées</span>
+            </li>
+            <li class="flex items-center gap-sm">
+              <span class="material-symbols-outlined text-primary" style="font-size:20px;font-variation-settings:'FILL' 1">support_agent</span>
+              <span class="font-body-md text-body-md">Accompagnement de A à Z</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partenaires -->
+    <div class="mt-xl pt-lg border-t border-outline-variant/20 flex flex-wrap justify-center md:justify-between items-center gap-lg opacity-60">
+      <span class="font-label-md text-label-md text-on-surface-variant italic">Ils nous font confiance :</span>
+      <div class="flex flex-wrap gap-xl grayscale">
+        <img alt="Tesla" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-sxvJBJkxrJpuS6RklnEjC-YhVB91WUqe7qFarJiKVRZj5CoOdcJA-AzQrLwU686U7O8a3s9DRF-sLXgfygA39FMRdmx_ztCKLCflY9RsmfhlmUcMcilqFcnwDLUNbop3TWAxnGlihZU19g6N39lAR1f5OF3zyryN9Xqx4Aax8MCOpxJSDVHIQYQKsJTxgdtxG0e9TT9RvrAcijbipvfb9ukotyWMYUfZMmkWDmoa0ASIw7ftcgm2JMD351XyeB0bNZ5Co5beAO5D"/>
+        <img alt="Schneider Electric" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpXU8oVfgny7nSzX_qDByLtXnqT2f2aI0--mJQHAkjqVOcI2fKsa10CtLMbFpQ4Eydk3ku-C8HMRuSYV4TuOf1gDjtUCJnvnBXRnlOavtll1z15CBDBbJh5qGZ__MhVQQ7fVH9JOij0ciHlrxovB4aX35OyWKI-GPc8jsiLiEvmmLCmcxH3fIt9Eyd9DoN-FQ7rciDiXF66Hbd0_42KLRX_m76JxwJo94YppeGlOtY4WVeje8Y0CsGvxj8tXQD_rIymzRWiuu0q_Gg"/>
+        <img alt="Renault" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd1RHs53QhJ-iX22mWHAz6bOc-97hOe77fXbV-sceAh_ydRpTTpyvRrIc6y2WTEZt7Z4o62YBdyhh2rA74L0Nj1lluMaVzTpdMidr0eE1QyhfRrUJHtrPWTW-ED8-aBvi1qg4D-NjvTevYnf4CaOkAQw1P9_NuxraO6G6f9-ggGNsWHsBCKj3ZDDH8qtSHBymx5UA_joudOXvZZlk9YGJF9ru3iXW1hWeIpFhQv3DV4zJo2LctlPumRvkEQtEyshdJ41yac03BDdFQ"/>
+      </div>
     </div>
   </div>
-
-  <!-- Téléphone & Adresse -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Téléphone</label>
-      <input name="telephone" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md" placeholder="6 00 00 00 00" type="tel" value="+33 "/>
-    </div>
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Adresse du chantier</label>
-      <input name="adresse" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md" placeholder="123 rue de la Paix, 75000 Paris" type="text"/>
-    </div>
-  </div>
-
-  <!-- Type de projet -->
-  <div class="space-y-xs">
-    <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Type de projet</label>
-    <div class="grid grid-cols-2 gap-md">
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input checked name="project_type" value="particulier" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">Particulier</span>
-      </label>
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input name="project_type" value="entreprise" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">Entreprise</span>
-      </label>
-    </div>
-  </div>
-
-  <!-- Type de borne & Nombre de bornes -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Type de borne souhaité</label>
-      <select name="type_borne" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md">
-       <option value="">-- Sélectionnez --</option>
-<option value="wallbox_pulsar_max">Wallbox Pulsar Max</option>
-<option value="schneider_standard">Schneider Electric (Standard)</option>
-<option value="hager_witty">Hager Witty Home</option>
-      </select>
-    </div>
-    <div class="space-y-xs">
-      <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Nombre de bornes</label>
-      <select name="nombre_bornes" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md">
-        <option value="">-- Sélectionnez --</option>
-        <option value="1">1 borne</option>
-        <option value="2">2 bornes</option>
-        <option value="3-5">3 à 5 bornes</option>
-        <option value="6-10">6 à 10 bornes</option>
-        <option value="10+">Plus de 10 bornes</option>
-      </select>
-    </div>
-  </div>
-
-  <!-- Distance au tableau électrique -->
-  <div class="space-y-xs">
-    <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Distance entre l'emplacement de la borne et le tableau électrique</label>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-sm">
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input name="distance_tableau" value="moins_5m" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">Moins de 5 m</span>
-      </label>
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input name="distance_tableau" value="5_10m" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">5 à 10 m</span>
-      </label>
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input name="distance_tableau" value="10_20m" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">10 à 20 m</span>
-      </label>
-      <label class="flex items-center gap-sm p-sm rounded-lg bg-surface-container-low cursor-pointer border-2 border-transparent has-[:checked]:border-primary transition-all">
-        <input name="distance_tableau" value="plus_20m" class="text-primary focus:ring-primary h-4 w-4" type="radio"/>
-        <span class="font-body-md text-body-md">Plus de 20 m</span>
-      </label>
-    </div>
-  </div>
-
-  <!-- Délai souhaité -->
-  <div class="space-y-xs">
-    <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Délai souhaité</label>
-    <select name="delai" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md">
-      <option value="">-- Sélectionnez --</option>
-      <option value="urgent">Le plus tôt possible</option>
-      <option value="1_mois">Dans le mois</option>
-      <option value="3_mois">Dans les 3 mois</option>
-      <option value="6_mois">Dans les 6 mois</option>
-      <option value="non_defini">Pas de délai précis</option>
-    </select>
-  </div>
-
-  <!-- Message -->
-  <div class="space-y-xs">
-    <label class="font-label-md text-label-md text-on-surface-variant ml-xs">Votre message</label>
-    <textarea name="message" class="w-full px-md py-sm rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all outline-none font-body-md text-body-md resize-none" placeholder="Décrivez votre besoin en quelques mots..." rows="5"></textarea>
-  </div>
-
-  <!-- Submit -->
-  <div class="pt-sm">
-    <button class="w-full md:w-auto bg-gradient-to-r from-primary to-secondary text-on-primary px-xl py-sm rounded-lg font-label-md text-label-md uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-sm" type="submit">
-      Envoyer ma demande
-      <span class="material-symbols-outlined" data-icon="send">send</span>
-    </button>
-  </div>
-
-</form>
-</div>
-<!-- Info Sidebar (Bento Column) -->
-<div class="lg:col-span-5 flex flex-col gap-gutter">
-<!-- Contact Details Card -->
-<div class="bg-surface-container border border-outline-variant/30 rounded-xl p-md shadow-sm">
-<h3 class="font-headline-sm text-headline-sm mb-md">Nos Coordonnées</h3>
-<ul class="space-y-md">
-<li class="flex items-start gap-md">
-<div class="bg-primary/10 p-sm rounded-lg text-primary">
-<span class="material-symbols-outlined" data-icon="phone">phone</span>
-</div>
-<div>
-<p class="font-label-md text-label-md text-on-surface-variant">Téléphone</p>
-<p class="font-body-lg text-body-lg font-semibold text-on-surface">06 51 07 88 28</p>
-</div>
-</li>
-<li class="flex items-start gap-md">
-<div class="bg-secondary/10 p-sm rounded-lg text-secondary">
-<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
-</div>
-<div>
-<p class="font-label-md text-label-md text-on-surface-variant">Adresse</p>
-<p class="font-body-lg text-body-lg font-semibold text-on-surface">95200 SARCELLES</p>
-</div>
-</li>
-<li class="flex items-start gap-md">
-<div class="bg-tertiary/10 p-sm rounded-lg text-tertiary">
-<span class="material-symbols-outlined" data-icon="share">share</span>
-</div>
-<div>
-<p class="font-label-md text-label-md text-on-surface-variant">Réseaux Sociaux</p>
-<div class="flex gap-sm mt-xs">
-<a class="text-on-surface hover:text-primary transition-colors" href="#">LinkedIn</a>
-<span class="text-outline-variant">•</span>
-<a class="text-on-surface hover:text-primary transition-colors" href="#">Instagram</a>
-<span class="text-outline-variant">•</span>
-<a class="text-on-surface hover:text-primary transition-colors" href="#">Twitter</a>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<!-- Map/Intervention Zone Card -->
-<div class="flex-grow bg-white border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm relative min-h-[300px]">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQUVPFa7UBRJUC7HJqGARQu-thDEqLSYo6I7SDDUX6Akq4-Z-v2PrnEvK5p6kfIUxLRByCFycqMXoxQIJtzp2OOyprW_EkVoXq4fJHU7LJzZZa0V-x0BgLAdPuWN4_4yDlk351a9u5OeFgOYBCcwBZkm3pCLM_DlDdoDnD6Ryy-1b4wkMTo6sKrQ9yGWZoe6YY9W98Y4k4QVZlT8cfzbKJtSF055yFtP6Vc1xlX256uz-lgrbGYkOKmD4B1fWhIkVI5T2rQsshcw-C"/>
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest/80 to-transparent flex items-end p-md z-10">
-<div class="bg-white/90 backdrop-blur-sm p-sm rounded-lg border border-outline-variant/30">
-<span class="flex items-center gap-xs text-primary font-semibold text-body-md">
-<span class="material-symbols-outlined text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
-                                    Zone d'intervention : Grand Paris &amp; IDF
-                                </span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Trusted Partners Section -->
-<div class="mt-xl pt-lg border-t border-outline-variant/20 flex flex-wrap justify-center md:justify-between items-center gap-lg opacity-60">
-<span class="font-label-md text-label-md text-on-surface-variant italic">Ils nous font confiance :</span>
-<div class="flex flex-wrap gap-xl grayscale">
-<img alt="Tesla" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-sxvJBJkxrJpuS6RklnEjC-YhVB91WUqe7qFarJiKVRZj5CoOdcJA-AzQrLwU686U7O8a3s9DRF-sLXgfygA39FMRdmx_ztCKLCflY9RsmfhlmUcMcilqFcnwDLUNbop3TWAxnGlihZU19g6N39lAR1f5OF3zyryN9Xqx4Aax8MCOpxJSDVHIQYQKsJTxgdtxG0e9TT9RvrAcijbipvfb9ukotyWMYUfZMmkWDmoa0ASIw7ftcgm2JMD351XyeB0bNZ5Co5beAO5D"/>
-<img alt="Schneider Electric" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpXU8oVfgny7nSzX_qDByLtXnqT2f2aI0--mJQHAkjqVOcI2fKsa10CtLMbFpQ4Eydk3ku-C8HMRuSYV4TuOf1gDjtUCJnvnBXRnlOavtll1z15CBDBbJh5qGZ__MhVQQ7fVH9JOij0ciHlrxovB4aX35OyWKI-GPc8jsiLiEvmmLCmcxH3fIt9Eyd9DoN-FQ7rciDiXF66Hbd0_42KLRX_m76JxwJo94YppeGlOtY4WVeje8Y0CsGvxj8tXQD_rIymzRWiuu0q_Gg"/>
-<img alt="Renault" class="h-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd1RHs53QhJ-iX22mWHAz6bOc-97hOe77fXbV-sceAh_ydRpTTpyvRrIc6y2WTEZt7Z4o62YBdyhh2rA74L0Nj1lluMaVzTpdMidr0eE1QyhfRrUJHtrPWTW-ED8-aBvi1qg4D-NjvTevYnf4CaOkAQw1P9_NuxraO6G6f9-ggGNsWHsBCKj3ZDDH8qtSHBymx5UA_joudOXvZZlk9YGJF9ru3iXW1hWeIpFhQv3DV4zJo2LctlPumRvkEQtEyshdJ41yac03BDdFQ"/>
-</div>
-</div>
-</div>
 </main>
+
 <!-- Footer -->
 <footer class="bg-surface-container border-t border-outline-variant py-lg mt-xl">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
-<div class="md:col-span-1">
-<div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-sm">IRV'OHM</div>
-<p class="font-body-md text-body-md text-on-surface-variant">L'expertise certifiée IRVE au service de votre mobilité durable.</p>
-</div>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Navigation</h4>
-<nav class="flex flex-col gap-xs">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Installation</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">FAQ</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Contact</a>
-</nav>
-</div>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Légal</h4>
-<nav class="flex flex-col gap-xs">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Mentions Légales</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Confidentialité</a>
-</nav>
-</div>
-<div>
-<h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Abonnez-vous</h4>
-<div class="flex gap-xs mt-xs">
-<input class="bg-surface px-sm py-xs rounded-lg border border-outline-variant/30 text-body-md w-full focus:ring-1 focus:ring-primary outline-none" placeholder="Email" type="email"/>
-<button class="bg-primary text-on-primary p-xs rounded-lg">
-<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-lg pt-md border-t border-outline-variant/10">
-<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2026 IRV'OHM - Solutions de Recharge Électrique. Tous droits réservés.</p>
-</div>
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+    <div class="md:col-span-1">
+      <div class="font-headline-sm text-headline-sm font-bold text-on-surface mb-sm">IRV'OHM</div>
+      <p class="font-body-md text-body-md text-on-surface-variant">L'expertise certifiée IRVE au service de votre mobilité durable.</p>
+    </div>
+    <div>
+      <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Navigation</h4>
+      <nav class="flex flex-col gap-xs">
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Installation</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">FAQ</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Contact</a>
+      </nav>
+    </div>
+    <div>
+      <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Légal</h4>
+      <nav class="flex flex-col gap-xs">
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Mentions Légales</a>
+        <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-colors" href="#">Confidentialité</a>
+      </nav>
+    </div>
+    <div>
+      <h4 class="font-label-md text-label-md uppercase tracking-wider text-primary mb-sm">Abonnez-vous</h4>
+      <div class="flex gap-xs mt-xs">
+        <input class="bg-surface px-sm py-xs rounded-lg border border-outline-variant/30 text-body-md w-full focus:ring-1 focus:ring-primary outline-none" placeholder="Email" type="email"/>
+        <button class="bg-primary text-on-primary p-xs rounded-lg">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop mt-lg pt-md border-t border-outline-variant/10">
+    <p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2026 IRV'OHM - Solutions de Recharge Électrique. Tous droits réservés.</p>
+  </div>
 </footer>
-</body></html>
+
+<script>
+  const state = {};
+  const stepMeta = [
+    {num:1, label:"Votre profil"},
+    {num:2, label:"Installation"},
+    {num:3, label:"Électricité"},
+    {num:4, label:"Délai & lieu"},
+    {num:5, label:"Coordonnées"},
+    {num:6, label:"Récapitulatif"},
+  ];
+
+  function pick(el) {
+    const g = el.dataset.group;
+    document.querySelectorAll('[data-group="'+g+'"]').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    state[g] = el.dataset.val;
+    checkCurrent();
+  }
+
+  function currentStep() {
+    for (let i = 1; i <= 7; i++) {
+      if (document.getElementById('s'+i).classList.contains('active')) return i;
+    }
+    return 1;
+  }
+
+  function checkCurrent() {
+    const n = currentStep();
+    checkStep(n);
+  }
+
+  function checkStep(n) {
+    const btn = document.getElementById('n'+n);
+    if (!btn) return;
+    let ok = false;
+    if (n === 1) ok = !!state.profil;
+    if (n === 2) ok = !!(state.nb && state.puissance);
+    if (n === 3) ok = !!state.distance;
+    if (n === 4) ok = !!state.delai;
+    if (n === 5) {
+      const em = document.getElementById('inp_email').value.trim();
+      const nm = document.getElementById('inp_nom').value.trim();
+      const ch = document.getElementById('chk_rgpd').checked;
+      ok = !!(em && nm && ch);
+    }
+    btn.disabled = !ok;
+  }
+
+  document.getElementById('inp_email').addEventListener('input', () => checkStep(5));
+  document.getElementById('inp_nom').addEventListener('input', () => checkStep(5));
+  document.getElementById('chk_rgpd').addEventListener('change', () => checkStep(5));
+
+  function updateUI(n) {
+    document.querySelectorAll('.wiz-step').forEach(p => p.classList.remove('active'));
+    document.getElementById('s'+n).classList.add('active');
+    const displayN = Math.min(n, 6);
+    document.getElementById('stepLabel').textContent =
+      'Étape ' + displayN + ' sur 6 · ' + (stepMeta[displayN-1] ? stepMeta[displayN-1].label : '');
+    document.getElementById('prog').style.width = (displayN / 6 * 100) + '%';
+    document.querySelectorAll('[data-dot]').forEach(d => {
+      const dn = parseInt(d.dataset.dot);
+      d.classList.remove('active','done');
+      if (dn < displayN) d.classList.add('done');
+      else if (dn === displayN) d.classList.add('active');
+    });
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  function goNext(n) {
+    if (n === 6) buildRecap();
+    updateUI(n);
+    checkStep(n);
+  }
+
+  function goBack(n) {
+    updateUI(n);
+    checkStep(n);
+  }
+
+  function buildRecap() {
+    const prenom = document.getElementById('inp_prenom').value.trim();
+    const nom = document.getElementById('inp_nom').value.trim();
+    const email = document.getElementById('inp_email').value.trim();
+    const tel = document.getElementById('inp_tel').value.trim();
+    const adresse = document.getElementById('inp_adresse').value.trim();
+    const borne = document.getElementById('sel_borne').value;
+    const msg = document.getElementById('inp_msg').value.trim();
+
+    const rows = [
+      ['Profil', state.profil || '—'],
+      ['Nombre de bornes', state.nb || '—'],
+      ['Puissance', state.puissance || '—'],
+      ['Distance tableau', state.distance || '—'],
+      borne ? ['Modèle de borne', borne] : null,
+      ['Délai souhaité', state.delai || '—'],
+      adresse ? ['Adresse chantier', adresse] : null,
+      ['Contact', (prenom + ' ' + nom).trim() || '—'],
+      ['Email', email || '—'],
+      tel ? ['Téléphone', tel] : null,
+      msg ? ['Message', msg] : null,
+    ].filter(Boolean);
+
+    document.getElementById('recap_box').innerHTML = rows.map(([l, v]) =>
+      '<div class="recap-row"><span style="color:#6c7b6d">' + l + '</span><span style="font-weight:600;color:#191c1e">' + v + '</span></div>'
+    ).join('');
+
+    const tags = [state.profil, state.nb, state.puissance, state.delai].filter(Boolean);
+    document.getElementById('tags_box').innerHTML = tags.map(t =>
+      '<span class="tag-badge"><span class="material-symbols-outlined" style="font-size:12px;font-variation-settings:\'FILL\' 1">check_circle</span>' + t + '</span>'
+    ).join('');
+  }
+
+  function submitForm() {
+    const prenom = document.getElementById('inp_prenom').value.trim();
+    const nom = document.getElementById('inp_nom').value.trim();
+    const email = document.getElementById('inp_email').value.trim();
+    const tel = document.getElementById('inp_tel').value.trim();
+    const adresse = document.getElementById('inp_adresse').value.trim();
+    const borne = document.getElementById('sel_borne').value;
+    const msg = document.getElementById('inp_msg').value.trim();
+
+    document.getElementById('f_profil').value = state.profil || '';
+    document.getElementById('f_nb').value = state.nb || '';
+    document.getElementById('f_puissance').value = state.puissance || '';
+    document.getElementById('f_distance').value = state.distance || '';
+    document.getElementById('f_borne').value = borne;
+    document.getElementById('f_delai').value = state.delai || '';
+    document.getElementById('f_adresse').value = adresse;
+    document.getElementById('f_prenom').value = prenom;
+    document.getElementById('f_nom').value = nom;
+    document.getElementById('f_email').value = email;
+    document.getElementById('f_tel').value = tel;
+    document.getElementById('f_msg').value = msg;
+
+    const form = document.getElementById('netlify_form');
+    const formData = new FormData(form);
+
+    fetch('/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => updateUI(7))
+    .catch(() => updateUI(7));
+  }
+</script>
+</body>
+</html>
